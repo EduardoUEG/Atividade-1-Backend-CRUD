@@ -50,6 +50,10 @@ public class VeiculoServiceImpl implements VeiculoService {
         if (repository.existsByPlaca(veiculo.getPlaca())) {
             throw new BusinessException("Já existe um veículo com essa placa: " + veiculo.getPlaca());
         }
+
+        if (veiculo.getChassi().length() != 17){
+            throw new BusinessException("Tamanho de chassi maior ou menor que 17 caracteres.");
+        }
     }
 
     @Override

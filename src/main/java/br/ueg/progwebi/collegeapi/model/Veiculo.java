@@ -30,7 +30,7 @@ public class Veiculo {
     @Column(name = "MODELO", length = 200, nullable = false)
     private String modelo;
 
-    @Column(name = "CHASSI", nullable = false, unique = true)
+    @Column(name = "CHASSI", length = 17,nullable = false, unique = true)
     private String chassi;
 
     @Column(name = "DATA_FABRICACAO", nullable = false)
